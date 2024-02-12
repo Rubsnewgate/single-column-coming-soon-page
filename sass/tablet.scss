@@ -1,0 +1,11 @@
+@import 'guide.scss';
+
+.main-wrapper {
+	width: 60vw;
+}
+
+@media screen and (min-height: 600px) and (max-height: 601px) {
+	body {
+		height: auto;
+	}
+}

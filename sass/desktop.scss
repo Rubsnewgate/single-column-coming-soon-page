@@ -1,0 +1,115 @@
+@import 'guide.scss';
+
+// Main Container
+.main-wrapper {
+	@include flexbox(column, start, center, 40px);
+	width: 45vw;
+	font-family: $primary-font;
+}
+
+// Subscribe section
+.subscribe-section {
+	position: relative;
+	@include flexbox(column, center, center, 15px);
+	width: 100%;
+	text-align: center;
+}
+.subscribe__logo-wrapper {
+	@include flexbox(row, center, center, null);
+	width: 100%;
+	height: 35px;
+}
+.subscribe__title {
+	margin: 0;
+	font-size: 4rem;
+	span {
+		font-weight: $light;
+		color: $gray;
+	}
+}
+.subscribe__description {
+	margin: 0;
+	font-size: $md-size;
+	font-weight: $semi-bold;
+	color: $very-dark-blue;
+}
+.subscribe__form {
+	width: 100%;
+	height: 50px;
+}
+.form__input {
+	width: 70%;
+	height: 100%;
+	padding: 5px 25px;
+	font-size: 1.6rem;
+	border: 1px solid $pale-blue;
+	border-radius: 25px;
+}
+.submit-btn {
+	width: 25%;
+	height: 100%;
+	margin-left: 10px;
+	font-size: 1.6rem;
+	font-weight: $light;
+	color: $white;
+	background-color: $blue;
+	border: none;
+	border-radius: 25px;
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+// Error Email Advice
+.email--error {
+	display: none;
+	position: absolute;
+	left: 6%;
+	bottom: -10%;
+	margin: 0;
+	font-size: 1.2rem;
+	font-weight: $semi-bold;
+	font-style: italic;
+	color: $light-red;
+}
+
+// Statistics graphic section
+.graphic {
+	width: 100%;
+	margin-bottom: 7vh;
+}
+.graphic__img-container {
+	@include flexbox(row, center, center, null);
+}
+.graphic__img {
+	width: 100%;
+	height: 300px;
+}
+
+// Footer
+.footer {
+	@include flexbox(column, center, center, 20px);
+	width: 100%;
+	text-align: center;
+	font-family: $primary-font;
+}
+.social-media {
+	@include flexbox(row, space-between, center, null);
+	width: 40%;
+	height: 40%;
+}
+.facebook-icon, .twitter-icon, .instagram-icon {
+	fill: $blue;
+	transition: transform 600ms;
+	&:hover {
+		cursor: pointer;
+		fill: $white;
+		background-color: $blue;
+		border-radius: 100%;
+		transform: scale(1.05);	}
+}
+.copyright {
+	margin: 0;
+	font-size: 1.2rem;
+	color: $gray;
+}
