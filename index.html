@@ -9,67 +9,58 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 	<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap" rel="stylesheet"/>
 	<!-- links -->
-	<link rel="stylesheet" href="../styles/desktop.css"/>
-	<link rel="stylesheet" href="../styles/tablet.css" media="(min-width: 768px) and (max-width: 1025px)"/>
-	<link rel="stylesheet" href="../styles/mobile.css" media="(min-width: 320px) and (max-width: 541px)"/>
+	<link rel="stylesheet" href="./styles/main.css"/>
 </head>
 <body>
 	<main class="main-wrapper">
 		<section class="subscribe-section">
 			<div class="subscribe__logo-wrapper">
-				<img class="subscribe__logo"
-					src="../assets/icons/logo.svg"
-					alt="Company logo"
-				/>
+				<img class="subscribe__logo" src="./assets/icons/logo.svg"
+					alt="Company logo"/>
 			</div>
 
-			<h1 class="subscribe__title">
-				<span> We are launching </span> soon!
-			</h1>
+			<h1 class="subscribe__title"> <span> We are launching </span> soon! </h1>
 
 			<p class="subscribe__description"> Subscribe and get notified </p>
 
 			<form class="subscribe__form" action="#">
 				<input class="form__input" type="email" name="email" id="email"
-					placeholder="Your email address" required
-				/>
-				<p class="email--error"> Please provide a valid email address </p>
+					placeholder="Your email address" required/>
 
-				<button class="submit-btn" type="submit">
-					Notify Me
-				</button>
+				<small class="email--error"> Please provide a valid email address </small>
+
+				<button class="submit-btn" type="submit"> Notify Me </button>
 			</form>
 		</section>
 
 		<section class="graphic">
 			<div class="graphic__img-container">
-				<img class="graphic__img" src="../assets/imgs/illustration-dashboard.png"
-					alt="Statistics graphic"
-				/>
+				<img class="graphic__img" src="./assets/imgs/illustration-dashboard.png"
+					alt="Statistics dashboard image"/>
 			</div>
 		</section>
 	</main>
 
 	<footer class="footer">
 		<div class="social-media">
-			<svg class="facebook-icon" width="34" height="34" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+			<svg class="facebook-icon" width="34" height="34" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor">
 				<path d="M480,257.35c0-123.7-100.3-224-224-224s-224,100.3-224,224c0,111.8,81.9,204.47,189,221.29V322.12H164.11V257.35H221V208c0-56.13,33.45-87.16,84.61-87.16,24.51,0,50.15,4.38,50.15,4.38v55.13H327.5c-27.81,0-36.51,17.26-36.51,35v42h62.12l-9.92,64.77H291V478.66C398.1,461.85,480,369.18,480,257.35Z" fill-rule="evenodd"/>
 			</svg>
-			<svg class="twitter-icon" width="34" height="34" xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+
+			<svg class="twitter-icon" width="34" height="34" xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" fill="currentColor">
 				<path d="M496,109.5a201.8,201.8,0,0,1-56.55,15.3,97.51,97.51,0,0,0,43.33-53.6,197.74,197.74,0,0,1-62.56,23.5A99.14,99.14,0,0,0,348.31,64c-54.42,0-98.46,43.4-98.46,96.9a93.21,93.21,0,0,0,2.54,22.1,280.7,280.7,0,0,1-203-101.3A95.69,95.69,0,0,0,36,130.4C36,164,53.53,193.7,80,211.1A97.5,97.5,0,0,1,35.22,199v1.2c0,47,34,86.1,79,95a100.76,100.76,0,0,1-25.94,3.4,94.38,94.38,0,0,1-18.51-1.8c12.51,38.5,48.92,66.5,92.05,67.3A199.59,199.59,0,0,1,39.5,405.6,203,203,0,0,1,16,404.2,278.68,278.68,0,0,0,166.74,448c181.36,0,280.44-147.7,280.44-275.8,0-4.2-.11-8.4-.31-12.5A198.48,198.48,0,0,0,496,109.5Z"/>
 			</svg>
-			<svg class="instagram-icon" width="34" height="34" xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+
+			<svg class="instagram-icon" width="34" height="34" xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" fill="currentColor">
 				<path d="M349.33,69.33a93.62,93.62,0,0,1,93.34,93.34V349.33a93.62,93.62,0,0,1-93.34,93.34H162.67a93.62,93.62,0,0,1-93.34-93.34V162.67a93.62,93.62,0,0,1,93.34-93.34H349.33m0-37.33H162.67C90.8,32,32,90.8,32,162.67V349.33C32,421.2,90.8,480,162.67,480H349.33C421.2,480,480,421.2,480,349.33V162.67C480,90.8,421.2,32,349.33,32Z"/>
 				<path d="M377.33,162.67a28,28,0,1,1,28-28A27.94,27.94,0,0,1,377.33,162.67Z"/>
 				<path d="M256,181.33A74.67,74.67,0,1,1,181.33,256,74.75,74.75,0,0,1,256,181.33M256,144A112,112,0,1,0,368,256,112,112,0,0,0,256,144Z"/>
 			</svg>
 		</div>
 
-		<p class="copyright">
-			&copy; Copyright Ping. All rights reserved.
-		</p>
+		<small class="copyright"> &copy; Copyright Ping. All rights reserved. </small>
 	</footer>
 
-	<script src="../js/main.js"></script>
+	<script src="./js/main.js"></script>
 </body>
 </html>

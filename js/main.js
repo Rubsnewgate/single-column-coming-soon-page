@@ -7,8 +7,8 @@ const domElements = {
 const validateEmail = (event) => {
 	event.preventDefault()
 
-	let userEmail = domElements.emailInput.value
-	let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+	const userEmail = domElements.emailInput.value
+	const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
 	if (!emailPattern.test(userEmail)) {
 		domElements.emailInput.style.border = '1px solid hsl(354, 100%, 66%)'

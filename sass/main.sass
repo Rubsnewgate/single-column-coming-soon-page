@@ -1,0 +1,158 @@
+@use 'resets.sass'
+
+// main container
+.main-wrapper
+	@include resets.flexbox(column, start, center, 2.5rem)
+	width: min(32.5rem, 100%)
+	font-family: resets.$primary-font
+
+// subscribe section
+.subscribe-section
+	position: relative
+	@include resets.flexbox(column, center, center, 1rem)
+	width: 100%
+	text-align: center
+	gap: 1.5rem
+
+.subscribe__logo-wrapper
+	@include resets.flexbox(row, center, center, null)
+	width: 100%
+	height: 2.25rem
+
+.subscribe__title
+	font-size: 2.4rem
+
+	span
+		font-weight: resets.$light
+		color: resets.$gray
+
+.subscribe__description
+	font-size: 1.125rem
+	font-weight: resets.$semi-bold
+	color: resets.$very-dark-blue
+
+.subscribe__form
+	@include resets.flexbox(column, center, start, 15px)
+	width: 100%
+	height: auto
+
+.form__input
+	width: 100%
+	height: 2.5rem
+	padding: 0.25rem 1.5rem
+	font-size: 1rem
+	border: 1px solid resets.$pale-blue
+	border-radius: 1.25rem
+
+.submit-btn
+	width: 100%
+	height: 2.5rem
+	font-size: 1rem
+	font-weight: resets.$light
+	color: resets.$white
+	background-color: resets.$blue
+	border: none
+	border-radius: 1.5rem
+
+	&:hover
+		cursor: pointer
+
+// error email advice
+.email--error
+	display: none
+	position: absolute
+	left: 15%
+	bottom: 20%
+	font-size: 0.75rem
+	font-weight: resets.$semi-bold
+	font-style: italic
+	color: resets.$light-red
+
+// statistics graphic section
+.graphic
+	width: 100%
+	margin-bottom: 7vh
+
+	&__img-container
+		@include resets.flexbox(row, center, center, null)
+
+.graphic__img
+	width: 100%
+	height: 11.25rem
+	object-fit: contain
+
+// footer
+.footer
+	@include resets.flexbox(column, center, center, 1.25rem)
+	width: 100%
+	text-align: center
+	font-family: resets.$primary-font
+	gap: 1.5rem
+
+.social-media
+	@include resets.flexbox(row, space-between, center, null)
+	width: 50%
+	height: 40%
+
+.facebook-icon, .twitter-icon, .instagram-icon
+	fill: resets.$blue
+
+	&:active
+		fill: resets.$white
+		background-color: resets.$blue
+		border-radius: 100%
+
+.copyright
+	font-size: 0.75rem
+	color: resets.$gray
+
+// Breakpoints
+@media screen and (min-width: 48rem)
+	.subscribe-section
+		gap: 0.5rem
+
+	.subscribe__title
+		font-size: 2.5rem
+
+	.subscribe__description
+		font-size: resets.$md-size
+
+	.subscribe__form
+		@include resets.flexbox(row, center, start, null)
+		height: 2.5rem
+
+	.form__input
+		width: 70%
+		height: 100%
+
+	.submit-btn
+		width: 25%
+		height: 100%
+		margin-inline-start: 0.75rem
+
+	.email--error
+		left: 6%
+		bottom: -10%
+
+	.graphic__img
+		height: 18.75rem
+
+	.social-media
+		width: 40%
+
+@media screen and (min-width: 64rem)
+	.facebook-icon, .twitter-icon, .instagram-icon
+		transition: transform 0.3s ease-in-out
+
+		&:hover
+			cursor: pointer
+			fill: resets.$white
+			background-color: resets.$blue
+			border-radius: 100%
+			transform: scale(1.05)
+
+		@media (prefers-reduced-motion: reduce)
+			transition: none
+
+			&:hover
+				transform: none

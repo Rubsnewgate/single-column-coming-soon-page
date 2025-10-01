@@ -1,0 +1,213 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  padding: calc(8px + 1.5625vw);
+  width: 100%;
+  min-height: 100vh;
+}
+
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 2.5rem;
+  width: min(32.5rem, 100%);
+  font-family: "Libre Franklin", sans-serif;
+}
+
+.subscribe-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  text-align: center;
+  gap: 1.5rem;
+}
+
+.subscribe__logo-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 2.25rem;
+}
+
+.subscribe__title {
+  font-size: 2.4rem;
+}
+.subscribe__title span {
+  font-weight: 300;
+  color: hsl(0, 0%, 59%);
+}
+
+.subscribe__description {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: hsl(209, 33%, 12%);
+}
+
+.subscribe__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 15px;
+  width: 100%;
+  height: auto;
+}
+
+.form__input {
+  width: 100%;
+  height: 2.5rem;
+  padding: 0.25rem 1.5rem;
+  font-size: 1rem;
+  border: 1px solid hsl(223, 100%, 88%);
+  border-radius: 1.25rem;
+}
+
+.submit-btn {
+  width: 100%;
+  height: 2.5rem;
+  font-size: 1rem;
+  font-weight: 300;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(223, 87%, 63%);
+  border: none;
+  border-radius: 1.5rem;
+}
+.submit-btn:hover {
+  cursor: pointer;
+}
+
+.email--error {
+  display: none;
+  position: absolute;
+  left: 15%;
+  bottom: 20%;
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-style: italic;
+  color: hsl(354, 100%, 66%);
+}
+
+.graphic {
+  width: 100%;
+  margin-bottom: 7vh;
+}
+.graphic__img-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.graphic__img {
+  width: 100%;
+  height: 11.25rem;
+  object-fit: contain;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  width: 100%;
+  text-align: center;
+  font-family: "Libre Franklin", sans-serif;
+  gap: 1.5rem;
+}
+
+.social-media {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  height: 40%;
+}
+
+.facebook-icon, .twitter-icon, .instagram-icon {
+  fill: hsl(223, 87%, 63%);
+}
+.facebook-icon:active, .twitter-icon:active, .instagram-icon:active {
+  fill: hsl(0, 0%, 100%);
+  background-color: hsl(223, 87%, 63%);
+  border-radius: 100%;
+}
+
+.copyright {
+  font-size: 0.75rem;
+  color: hsl(0, 0%, 59%);
+}
+
+@media screen and (min-width: 48rem) {
+  .subscribe-section {
+    gap: 0.5rem;
+  }
+  .subscribe__title {
+    font-size: 2.5rem;
+  }
+  .subscribe__description {
+    font-size: 1.25rem;
+  }
+  .subscribe__form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    height: 2.5rem;
+  }
+  .form__input {
+    width: 70%;
+    height: 100%;
+  }
+  .submit-btn {
+    width: 25%;
+    height: 100%;
+    margin-inline-start: 0.75rem;
+  }
+  .email--error {
+    left: 6%;
+    bottom: -10%;
+  }
+  .graphic__img {
+    height: 18.75rem;
+  }
+  .social-media {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 64rem) {
+  .facebook-icon, .twitter-icon, .instagram-icon {
+    transition: transform 0.3s ease-in-out;
+  }
+  .facebook-icon:hover, .twitter-icon:hover, .instagram-icon:hover {
+    cursor: pointer;
+    fill: hsl(0, 0%, 100%);
+    background-color: hsl(223, 87%, 63%);
+    border-radius: 100%;
+    transform: scale(1.05);
+  }
+}
+@media screen and (min-width: 64rem) and (prefers-reduced-motion: reduce) {
+  .facebook-icon, .twitter-icon, .instagram-icon {
+    transition: none;
+  }
+  .facebook-icon:hover, .twitter-icon:hover, .instagram-icon:hover {
+    transform: none;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
